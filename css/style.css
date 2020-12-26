@@ -64,6 +64,14 @@ h1::before {
 
 header {
   height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  background: #fafafa;
+  -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
 header .container {
@@ -147,6 +155,7 @@ header .container nav .nav-list li:nth-child(4):hover {
 .mobile-nav .content img {
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 
 .mobile-nav .content .nav-list {
@@ -173,6 +182,7 @@ header .container nav .nav-list li:nth-child(4):hover {
   background-color: #2b272f;
   height: calc(100vh - 100px);
   position: relative;
+  margin-top: 100px;
 }
 
 #hero img {
@@ -411,7 +421,7 @@ footer .bg-pattern {
   z-index: -1;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 576px) {
   .menu-icon {
     display: block;
   }
@@ -440,12 +450,7 @@ footer .bg-pattern {
   }
   #hero {
     height: auto;
-  }
-  #hero .bg-left {
-    top: 394.75px;
-  }
-  #hero .bg-right {
-    top: 83.5%;
+    margin-top: 75px;
   }
   #hero .container {
     -webkit-box-orient: vertical;
@@ -462,6 +467,19 @@ footer .bg-pattern {
     width: 100%;
     padding: 7rem 1rem;
     text-align: center;
+    position: relative;
+  }
+  #hero .container .content .bg-left, #hero .container .content .bg-right {
+    width: auto;
+    position: absolute;
+  }
+  #hero .container .content .bg-left {
+    left: 0;
+    top: 0;
+  }
+  #hero .container .content .bg-right {
+    right: 0;
+    top: 70%;
   }
   #hero .container .content h1 {
     font-size: 2.65rem;

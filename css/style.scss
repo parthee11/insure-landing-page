@@ -50,6 +50,13 @@ h1 {
 // header
 header {
     height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    background: $light-gray;
+    box-shadow: 0 2px 15px rgba($color: #000000, $alpha: 0.3);
     .container {
         height: 100%;
         @include centerContent;
@@ -103,6 +110,7 @@ header {
         img {
             position: absolute;
             bottom: 0;
+            width: 100%;
         }
         .nav-list {
             padding: 2rem 1.75rem 0;
@@ -128,6 +136,7 @@ header {
     background-color: $dark-violet;
     height: calc(100vh - 100px);
     position: relative;
+    margin-top: 100px;
     img {
         position: absolute;
     }
@@ -307,7 +316,7 @@ footer {
 }
 
 // responsive mobile resolution max-width - 376px
-@media (max-width: 376px) {
+@media (max-width: 576px) {
 
     .menu-icon { display: block; }
     .mb { display: block; }
@@ -343,12 +352,7 @@ footer {
     // hero
     #hero {
         height: auto;
-        .bg-left {
-            top: 394.75px;
-        }
-        .bg-right {
-            top: 83.5%;
-        }
+        margin-top: 75px;
         .container {
             flex-direction: column;
             img {
@@ -360,6 +364,19 @@ footer {
                 width: 100%;
                 padding: 7rem 1rem;
                 text-align: center;
+                position: relative;
+                .bg-left, .bg-right {
+                    width: auto;
+                    position: absolute;
+                }
+                .bg-left {
+                    left: 0;
+                    top: 0;
+                }
+                .bg-right {
+                    right: 0;
+                    top: 70%;
+                }
                 h1 {
                     font-size: 2.65rem;
                     &::before {
