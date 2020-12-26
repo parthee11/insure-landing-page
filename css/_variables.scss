@@ -1,0 +1,30 @@
+// imports
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+// colors
+
+// primary
+$dark-violet: hsl(270, 9%, 17%);
+$gray-blue: hsl(216, 30%, 68%);
+
+// neutral
+$very-dark-violet: hsl(270, 9%, 17%);
+$dark-gray-violet: hsl(273, 4%, 51%);
+$light-gray: hsl(0, 0%, 98%);
+
+// typography
+$font-heading: 'DM Serif Display', serif;
+$font-body: 'Karla', sans-serif;
+
+// mixins
+@mixin centerContent {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+@mixin centerContentCol {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
